@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+#game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(155, 155, 155);
+}
+
+#gameboard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    width: 600px;
+    height: 350px;
+    margin-top: -200px;
+    background-color: rgb(251, 254, 235);
+}
+
+#player {
+    width: 50px;
+    height: 100px;
+    margin-left: 50px;
+    background-color: black;
+}
+
+.enemy {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    margin-left: 700px;
+}
+
+.jumpAnimate {
+    animation: jump;
+    animation-duration: 1s;
+}
+
+.slideAnimate {
+    animation: slide;
+    animation-duration: 2s;
+}
+
+@keyframes jump {
+    0% {
+        margin-bottom: 0px;
+    }
+    14% {
+        margin-bottom: 60px;
+    }
+    25% {
+        margin-bottom: 60px;
+    }
+    55% {
+        margin-bottom: 60px;
+    }
+    100% {
+        margin-bottom: 0px;
+    }
+}
+
+@keyframes slide {
+    0% {
+        margin-left: 650px;
+    }
+    100% {
+        margin-left: -200px;
+    }
+}
